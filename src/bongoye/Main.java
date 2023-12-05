@@ -19,5 +19,15 @@ public class Main {
 
         mydb = new DatabaseManager(databaseNames[0], username, passString);
         mydb.query("SELECT * from " + myTables[0]);
+
+        //insert
+        String[] fieldNames = {"field1"};
+        String[] fieldValues = {"value1"};
+        mydb.insert(myTables[0],fieldNames,fieldValues);
+        
+        //select
+        mydb.select(myTables[0]);
+        mydb.select(myTables[0],fieldNames);
+
     }
 }
